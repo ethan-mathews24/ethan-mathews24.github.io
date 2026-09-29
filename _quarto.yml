@@ -10,7 +10,8 @@ project:
 website:
   title: "Ethan Mathews"
   favicon: media/portfolio.png
-  site-url: https://ethan-mathews24.github.io/ethan-mathews24/
+  site-url: https://ethan-mathews24.github.io
+  repo-url: https://github.com/ethan-mathews24/ethan-mathews24.github.io
   navbar:
     title: "Ethan Mathews"
     logo: media/portfolio.png
