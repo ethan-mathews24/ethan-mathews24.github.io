@@ -37,6 +37,11 @@ travel_points <- data.frame(
     "Whistler, Canada", "Vancouver, Canada",
     "Scottsdale, Arizona", "Salt Lake City, Utah", "Omaha, Nebraska", "Bend, Oregon", "Seattle, Washington", "Miami, Florida",
     "Barcelona, Spain", "Seville, Spain", "Granada, Spain", "Porto, Portugal", "Lisbon, Portugal", "Sintra, Portugal",
+    "Tokyo, Japan", "Osaka, Japan", "Kyoto, Japan", "Mount Fuji, Japan",
+    "Dublin, Ireland", "Kilkenny, Ireland", "Thurles, Ireland", "Cashel, Ireland", "Lisheen, Ireland",
+    "London, England", "Edinburgh, Scotland", "Birmingham, England",
+    "Cabo San Lucas, Mexico", "Ixtapa, Mexico",
+    "Belize City, Belize",
     "Encinitas, California"
   ),
   lat = c(
@@ -47,6 +52,11 @@ travel_points <- data.frame(
     50.1163, 49.2827,
     33.4942, 40.7608, 41.2565, 44.0582, 47.6062, 25.7617,
     41.3851, 37.3891, 37.1773, 41.1579, 38.7223, 38.8029,
+    35.6762, 34.6937, 35.0116, 35.3606,
+    53.3498, 52.6541, 52.6806, 52.5159, 52.7290,
+    51.5072, 55.9533, 52.4862,
+    22.8905, 17.6615,
+    17.5046,
     33.0369
   ),
   lon = c(
@@ -57,6 +67,11 @@ travel_points <- data.frame(
     -122.9574, -123.1207,
     -111.9261, -111.8910, -95.9345, -121.3153, -122.3321, -80.1918,
     2.1734, -5.9845, -3.5986, -8.6291, -9.1393, -9.3884,
+    139.6503, 135.5023, 135.7681, 138.7274,
+    -6.2603, -7.2448, -7.8139, -7.8856, -7.6930,
+    -0.1276, -3.1883, -1.8904,
+    -109.9167, -101.6036,
+    -88.1962,
     -117.2919
   ),
   region = c(
@@ -67,6 +82,11 @@ travel_points <- data.frame(
     rep("Canada", 2),
     rep("USA", 6),
     rep("Europe", 6),
+    rep("Asia", 4),
+    rep("Ireland", 5),
+    rep("United Kingdom", 3),
+    rep("Mexico", 2),
+    "Central America",
     "Home"
   )
 )

@@ -1,95 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ethan-mathews24.github.io/ethan-mathews24/pets.html</loc>
-    <lastmod>2025-06-03T04:41:15.828Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ethan-mathews24.github.io/ethan-mathews24/about.html</loc>
-    <lastmod>2025-05-23T17:26:45.471Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ethan-mathews24.github.io/ethan-mathews24/hobbies.html</loc>
-    <lastmod>2026-09-22T21:23:43.880Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ethan-mathews24.github.io/ethan-mathews24/projects/Op-Ed.html</loc>
-    <lastmod>2025-06-07T03:28:14.061Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ethan-mathews24.github.io/ethan-mathews24/projects/omahacasestudy.html</loc>
-    <lastmod>2025-06-10T00:13:55.065Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ethan-mathews24.github.io/ethan-mathews24/projects/docs/adventures/portugal-spain.html</loc>
-    <lastmod>2025-05-31T21:17:19.640Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ethan-mathews24.github.io/ethan-mathews24/projects/eir.html</loc>
-    <lastmod>2025-06-03T04:02:01.072Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ethan-mathews24.github.io/ethan-mathews24/adventures/lima-cusco.html</loc>
-    <lastmod>2025-05-31T00:41:45.467Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ethan-mathews24.github.io/ethan-mathews24/past-adventures.html</loc>
-    <lastmod>2025-06-03T04:16:59.829Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ethan-mathews24.github.io/ethan-mathews24/about me.html</loc>
-    <lastmod>2025-05-26T00:24:41.827Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ethan-mathews24.github.io/ethan-mathews24/adventures/portugal-spain.html</loc>
-    <lastmod>2025-05-31T23:08:36.295Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ethan-mathews24.github.io/ethan-mathews24/projects/GISproject.html</loc>
-    <lastmod>2025-06-03T03:19:48.947Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ethan-mathews24.github.io/ethan-mathews24/projects/greenbuilding.html</loc>
-    <lastmod>2025-06-07T03:28:15.449Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ethan-mathews24.github.io/ethan-mathews24/projects/docs/adventures/lima-cusco.html</loc>
-    <lastmod>2025-05-31T00:41:45.467Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ethan-mathews24.github.io/ethan-mathews24/projects/GISCproject.html</loc>
-    <lastmod>2025-06-06T20:37:03.491Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ethan-mathews24.github.io/ethan-mathews24/projects.html</loc>
-    <lastmod>2025-05-31T20:59:37.459Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ethan-mathews24.github.io/ethan-mathews24/index.html</loc>
-    <lastmod>2026-09-23T22:39:30.662Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ethan-mathews24.github.io/ethan-mathews24/true-passion.html</loc>
-    <lastmod>2025-06-03T03:16:14.220Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ethan-mathews24.github.io/ethan-mathews24/CV.html</loc>
-    <lastmod>2025-06-03T03:52:02.651Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ethan-mathews24.github.io/ethan-mathews24/adventures/japan.html</loc>
-    <lastmod>2026-09-24T00:52:50.927Z</lastmod>
+    <loc>https://ethan-mathews24.github.io/pets.html</loc>
+    <lastmod>2026-10-14T18:28:15.420Z</lastmod>
   </url>
   <url>
     <loc>https://ethan-mathews24.github.io/index.html</loc>
-    <lastmod>2026-09-29T17:03:12.314Z</lastmod>
+    <lastmod>2026-10-14T18:28:40.051Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ethan-mathews24.github.io/projects.html</loc>
+    <lastmod>2025-05-31T20:59:37.459Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ethan-mathews24.github.io/projects/GISCproject.html</loc>
+    <lastmod>2025-06-06T20:37:03.491Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ethan-mathews24.github.io/projects/greenbuilding.html</loc>
+    <lastmod>2025-06-07T03:28:15.449Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ethan-mathews24.github.io/projects/GISproject.html</loc>
+    <lastmod>2025-06-03T03:19:48.947Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ethan-mathews24.github.io/adventures/lima-cusco.html</loc>
+    <lastmod>2025-05-31T00:41:45.467Z</lastmod>
   </url>
   <url>
     <loc>https://ethan-mathews24.github.io/past-adventures.html</loc>
-    <lastmod>2025-06-03T04:16:59.829Z</lastmod>
+    <lastmod>2026-10-14T18:29:14.158Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ethan-mathews24.github.io/about me.html</loc>
+    <lastmod>2026-10-14T18:28:14.058Z</lastmod>
   </url>
   <url>
     <loc>https://ethan-mathews24.github.io/adventures/portugal-spain.html</loc>
     <lastmod>2026-09-24T01:03:42.667Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ethan-mathews24.github.io/adventures/japan.html</loc>
+    <lastmod>2026-09-24T00:52:50.927Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ethan-mathews24.github.io/projects/eir.html</loc>
+    <lastmod>2025-06-03T04:02:01.072Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ethan-mathews24.github.io/projects/omahacasestudy.html</loc>
+    <lastmod>2025-06-10T00:13:55.065Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ethan-mathews24.github.io/projects/Op-Ed.html</loc>
+    <lastmod>2025-06-07T03:28:14.061Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ethan-mathews24.github.io/hobbies.html</loc>
+    <lastmod>2026-09-22T21:23:43.880Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ethan-mathews24.github.io/true-passion.html</loc>
+    <lastmod>2025-06-03T03:16:14.220Z</lastmod>
   </url>
 </urlset>

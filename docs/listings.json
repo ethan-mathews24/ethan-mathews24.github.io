@@ -1,13 +1,5 @@
 [
   {
-    "listing": "/past-adventures.html",
-    "items": [
-      "/adventures/portugal-spain.html",
-      "/adventures/lima-cusco.html",
-      "/adventures/japan.html"
-    ]
-  },
-  {
     "listing": "/projects.html",
     "items": [
       "/projects/GISproject.html",
@@ -16,6 +8,14 @@
       "/projects/omahacasestudy.html",
       "/projects/GISCproject.html",
       "/projects/Op-Ed.html"
+    ]
+  },
+  {
+    "listing": "/past-adventures.html",
+    "items": [
+      "/adventures/portugal-spain.html",
+      "/adventures/lima-cusco.html",
+      "/adventures/japan.html"
     ]
   }
 ]
