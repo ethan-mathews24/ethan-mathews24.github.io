@@ -1,0 +1,17 @@
+---
+title: "Monitoring Deserts: The Hidden Bias in U.S. Air Quality Data"
+description: "How gaps in the nation's air-quality monitoring network create data bias, and what can be done about it."
+image: media/nyfires.png
+toc: true
+---
+
+## Overview
+
+This post was my final project for EDS 242: Ethics and Bias in Environmental Data Science. We were asked to pick a real-world case of data bias and explore its causes, impacts, and solutions. I chose air quality monitoring because the data shapes public health decisions for millions of people, yet few of us ever ask where it comes from or who it leaves out.
+
+
+## Blog Post
+
+Read full blog post [HERE](files/)
+
+![](files/.pdf){width="95%" height="700"}
