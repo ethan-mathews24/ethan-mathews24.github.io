@@ -1,13 +1,13 @@
 ---
 title: "Projects"
 listing: 
-  contents: projects
-  sort: false
+  contents: projects                  # comes from this file
+  sort: "date desc"                   # newest posts first
   type: grid
   image-align: right
   max-description-length: 350
   date-format: medium
-  categories: false
+  categories: true                    # enables category filtering
 page-layout: article
 freeze: auto
 editor: source
