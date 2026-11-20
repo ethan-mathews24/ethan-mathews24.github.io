@@ -1,7 +1,15 @@
 ---
 title: "Campus Point Faculty Housing EIR – Biology Focus"
 description: "A focused Environmental Impact Report analyzing biological impacts and mitigation strategies for a proposed housing and classroom project at UCSB's Campus Point."
+author:
+  - name: Ethan Mathews
+    url: https://ethan-mathews24.github.io/
+    affiliation: Undergraduate @ The Univeristy of California, Santa Barbara
+    affiliation-url: https://es.ucsb.edu/
+date: 03-19-2025
+categories: [Writing, ArcGIS, Undergrad, UCSB]
 image: media/ucsbcampus.jpg
+draft: false
 toc: true
 ---
 

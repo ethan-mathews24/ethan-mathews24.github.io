@@ -74,12 +74,6 @@ a:hover {
   text-align: center; /* Center the container */
 }
 
-/* Center the listing cards themselves */
-.quarto-grid-item {
-  display: inline-block;
-  margin: 1rem;
-}
-
 /* Make all cluster markers green */
 .marker-cluster-small div,
 .marker-cluster-medium div,

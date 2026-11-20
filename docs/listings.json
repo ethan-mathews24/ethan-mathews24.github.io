@@ -2,12 +2,12 @@
   {
     "listing": "/projects.html",
     "items": [
-      "/projects/GISproject.html",
-      "/projects/eir.html",
+      "/projects/monitoring_deserts_blog/index.html",
       "/projects/greenbuilding.html",
-      "/projects/DataBias.html",
-      "/projects/omahacasestudy.html",
       "/projects/GISCproject.html",
+      "/projects/omahacasestudy.html",
+      "/projects/eir.html",
+      "/projects/GISproject.html",
       "/projects/Op-Ed.html"
     ]
   },

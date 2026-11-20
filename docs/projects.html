@@ -90,9 +90,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -143,7 +143,7 @@ window.Quarto = {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -373,7 +373,8 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="QXJjR0lT">ArcGIS <span class="quarto-category-count">(4)</span></div><div class="category" data-category="QmxvZw==">Blog <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RGF0YSUyMEJpYXM=">Data Bias <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TUVEUw==">MEDS <span class="quarto-category-count">(1)</span></div><div class="category" data-category="T3AtRWQ=">Op-Ed <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U1FM">SQL <span class="quarto-category-count">(2)</span></div><div class="category" data-category="VUNTQg==">UCSB <span class="quarto-category-count">(6)</span></div><div class="category" data-category="VW5kZXJncmFk">Undergrad <span class="quarto-category-count">(6)</span></div><div class="category" data-category="V3JpdGluZw==">Writing <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -403,49 +404,40 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1748920788947" data-listing-reading-time-sort="1" data-listing-word-count-sort="39">
-<a href="./projects/GISproject.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="0" data-categories="QmxvZyUyQ0RhdGElMjBCaWFzJTJDTUVEUw==" data-listing-date-sort="1794211200000" data-listing-file-modified-sort="1795196815666" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1402">
+<a href="./projects/monitoring_deserts_blog/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="./projects/media/campfire.jpg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./projects/monitoring_deserts_blog/media/nyaqi.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-Camp Fire (2018) Evacuation Analysis
+Monitoring Deserts: The Hidden Bias in U.S. Air Quality Data
 </h5>
-<div class="card-text listing-description delink">
-<p>Used GIS to analyze fire station response coverage and propose optimal fire station siting for Paradise, CA.</p>
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
+<div class="listing-categories">
 
+<div class="listing-category" onclick="window.quartoListingCategory('QmxvZw=='); return false;">Blog</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RGF0YSUyMEJpYXM='); return false;">Data Bias</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TUVEUw=='); return false;">MEDS</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>How gaps in the nation’s air-quality monitoring network create data bias, and what can be done about it.</p>
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Ethan Mathews
+</div>
+<div class="listing-date">
+Nov 9, 2026
 </div>
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1794113567963" data-listing-reading-time-sort="1" data-listing-word-count-sort="84">
-<a href="./projects/eir.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./projects/media/ucsbcampus.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Campus Point Faculty Housing EIR – Biology Focus
-</h5>
-<div class="card-text listing-description delink">
-<p>A focused Environmental Impact Report analyzing biological impacts and mitigation strategies for a proposed housing and classroom project at UCSB’s Campus Point.</p>
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1749266895449" data-listing-reading-time-sort="8" data-listing-word-count-sort="1454">
+<div class="g-col-1" data-index="1" data-categories="QmxvZyUyQ1IlMkNVbmRlcmdyYWQlMkNVQ1NC" data-listing-date-sort="1749193200000" data-listing-file-modified-sort="1795193312560" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1454">
 <a href="./projects/greenbuilding.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -455,63 +447,32 @@ Campus Point Faculty Housing EIR – Biology Focus
 <h5 class="no-anchor card-title listing-title">
 Ellison Hall Green Building Assessment
 </h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('QmxvZw=='); return false;">Blog</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('VW5kZXJncmFk'); return false;">Undergrad</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('VUNTQg=='); return false;">UCSB</div>
+
+</div>
 <div class="card-text listing-description delink">
 <p>A case study analyzing sustainability performance and retrofit opportunities at UCSB’s Ellison Hall.</p>
 </div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-date-sort="1794211200000" data-listing-file-modified-sort="1794262306834" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="72">
-<a href="./projects/DataBias.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./projects/media/nyaqi.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Monitoring Deserts: The Hidden Bias in U.S. Air Quality Data
-</h5>
-<div class="card-text listing-description delink">
-<p>How gaps in the nation’s air-quality monitoring network create data bias, and what can be done about it.</p>
-</div>
 <div class="card-attribution card-text-small justify">
 <div class="listing-author">
-
+Ethan Mathews
 </div>
 <div class="listing-date">
-Nov 9, 2026
+Jun 6, 2025
 </div>
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1749514435065" data-listing-reading-time-sort="2" data-listing-word-count-sort="287">
-<a href="./projects/omahacasestudy.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./projects/media/omaha.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Omaha Housing Development Suitability Analysis
-</h5>
-<div class="card-text listing-description delink">
-<p>Land suitability analysis for mid-density housing in Omaha based on proximity to key infrastructure and demographic need.</p>
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1794112815865" data-listing-reading-time-sort="1" data-listing-word-count-sort="197">
+<div class="g-col-1" data-index="2" data-categories="QXJjR0lTJTJDU1FMJTJDVW5kZXJncmFkJTJDVUNTQg==" data-listing-date-sort="1747638000000" data-listing-file-modified-sort="1795193305149" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="197">
 <a href="./projects/GISCproject.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -521,18 +482,135 @@ Omaha Housing Development Suitability Analysis
 <h5 class="no-anchor card-title listing-title">
 Spatial Analysis of the Nitrate Contamination from Industrial Agriculture in Fresno County
 </h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('QXJjR0lT'); return false;">ArcGIS</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('U1FM'); return false;">SQL</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('VW5kZXJncmFk'); return false;">Undergrad</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('VUNTQg=='); return false;">UCSB</div>
+
+</div>
 <div class="card-text listing-description delink">
 <p>Spatial analysis of nitrate contamination in domestic wells based on proximity to almond and grape cropland.</p>
 </div>
-<div class="card-attribution card-text-small start">
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
-
+Ethan Mathews
+</div>
+<div class="listing-date">
+May 19, 2025
 </div>
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="6" data-listing-file-modified-sort="1749266894061" data-listing-reading-time-sort="1" data-listing-word-count-sort="50">
+<div class="g-col-1" data-index="3" data-categories="QXJjR0lTJTJDVW5kZXJncmFkJTJDVUNTQg==" data-listing-date-sort="1745996400000" data-listing-file-modified-sort="1795193316319" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="287">
+<a href="./projects/omahacasestudy.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./projects/media/omaha.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Omaha Housing Development Suitability Analysis
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('QXJjR0lT'); return false;">ArcGIS</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('VW5kZXJncmFk'); return false;">Undergrad</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('VUNTQg=='); return false;">UCSB</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Land suitability analysis for mid-density housing in Omaha based on proximity to key infrastructure and demographic need.</p>
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Ethan Mathews
+</div>
+<div class="listing-date">
+Apr 30, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="V3JpdGluZyUyQ0FyY0dJUyUyQ1VuZGVyZ3JhZCUyQ1VDU0I=" data-listing-date-sort="1742367600000" data-listing-file-modified-sort="1795192772686" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="84">
+<a href="./projects/eir.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./projects/media/ucsbcampus.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Campus Point Faculty Housing EIR – Biology Focus
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('V3JpdGluZw=='); return false;">Writing</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('QXJjR0lT'); return false;">ArcGIS</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('VW5kZXJncmFk'); return false;">Undergrad</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('VUNTQg=='); return false;">UCSB</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>A focused Environmental Impact Report analyzing biological impacts and mitigation strategies for a proposed housing and classroom project at UCSB’s Campus Point.</p>
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Ethan Mathews
+</div>
+<div class="listing-date">
+Mar 19, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="5" data-categories="QXJjR0lTJTJDU1FMJTJDVW5kZXJncmFkJTJDVUNTQg==" data-listing-date-sort="1741935600000" data-listing-file-modified-sort="1795193308706" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="39">
+<a href="./projects/GISproject.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./projects/media/campfire.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Camp Fire (2018) Evacuation Analysis
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('QXJjR0lT'); return false;">ArcGIS</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('U1FM'); return false;">SQL</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('VW5kZXJncmFk'); return false;">Undergrad</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('VUNTQg=='); return false;">UCSB</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Used GIS to analyze fire station response coverage and propose optimal fire station siting for Paradise, CA.</p>
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Ethan Mathews
+</div>
+<div class="listing-date">
+Mar 14, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="6" data-categories="T3AtRWQlMkNVbmRlcmdyYWQlMkNVQ1NC" data-listing-date-sort="1741248000000" data-listing-file-modified-sort="1795193339001" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="50">
 <a href="./projects/Op-Ed.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -542,12 +620,24 @@ Spatial Analysis of the Nitrate Contamination from Industrial Agriculture in Fre
 <h5 class="no-anchor card-title listing-title">
 Agroecology and the Future of Nebraska Farming
 </h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('T3AtRWQ='); return false;">Op-Ed</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('VW5kZXJncmFk'); return false;">Undergrad</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('VUNTQg=='); return false;">UCSB</div>
+
+</div>
 <div class="card-text listing-description delink">
 <p>An op-ed exploring how agroecological practices can offer a sustainable path forward for farmers in Nebraska.</p>
 </div>
-<div class="card-attribution card-text-small start">
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
-
+Ethan Mathews
+</div>
+<div class="listing-date">
+Mar 6, 2025
 </div>
 </div>
 </div>

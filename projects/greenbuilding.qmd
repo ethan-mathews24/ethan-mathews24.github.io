@@ -1,8 +1,18 @@
 ---
 title: "Ellison Hall Green Building Assessment"
 description: "A case study analyzing sustainability performance and retrofit opportunities at UCSB’s Ellison Hall."
+author:
+  - name: Ethan Mathews
+    url: https://ethan-mathews24.github.io/
+    affiliation: Undergraduate @ The Univeristy of California, Santa Barbara
+    affiliation-url: https://es.ucsb.edu/
+date: 06-06-2025
+categories: [Blog, R, Undergrad, UCSB]
 image: media/ellisonhall.jpg
+draft: false
 toc: true
+citation:
+    url: https://ethan-mathews24.github.io/
 ---
 
 ## Overview

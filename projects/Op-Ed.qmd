@@ -1,8 +1,18 @@
 ---
 title: "Agroecology and the Future of Nebraska Farming"
 description: "An op-ed exploring how agroecological practices can offer a sustainable path forward for farmers in Nebraska."
+author:
+  - name: Ethan Mathews
+    url: https://ethan-mathews24.github.io/
+    affiliation: Undergraduate @ The Univeristy of California, Santa Barbara
+    affiliation-url: https://es.ucsb.edu/
+date: 03-06-2025
+categories: [Op-Ed, Undergrad, UCSB]
 image: media/agroecology.JPEG
+draft: false
 toc: true
+citation:
+    url: https://ethan-mathews24.github.io/
 ---
 
 ## Overview

@@ -1,8 +1,18 @@
 ---
 title: "Omaha Housing Development Suitability Analysis"
 description: "Land suitability analysis for mid-density housing in Omaha based on proximity to key infrastructure and demographic need."
+author:
+  - name: Ethan Mathews
+    url: https://ethan-mathews24.github.io/
+    affiliation: Undergraduate @ The Univeristy of California, Santa Barbara
+    affiliation-url: https://es.ucsb.edu/
+date: 06-00-2025
+categories: [ArcGIS, Undergrad, UCSB]
 image: media/omaha.jpg
+draft: false
 toc: true
+citation:
+    url: https://ethan-mathews24.github.io/
 ---
 
 ## Overview
