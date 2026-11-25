@@ -6,10 +6,9 @@ author:
     url: https://ethan-mathews24.github.io/
     affiliation: Undergraduate @ The Univeristy of California, Santa Barbara
     affiliation-url: https://es.ucsb.edu/
-date: 03-19-2025
+date: 2025-03-19
 categories: [Technical Writing, ArcGIS, Undergrad]
 image: media/ucsbcampus.jpg
-draft: false
 toc: true
 ---
 

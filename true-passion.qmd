@@ -1,5 +1,6 @@
 ---
 title: "why i love nature"
+lightbox: auto
 freeze: auto
 format:
   html:

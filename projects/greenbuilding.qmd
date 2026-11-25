@@ -6,10 +6,11 @@ author:
     url: https://ethan-mathews24.github.io/
     affiliation: Undergraduate @ The Univeristy of California, Santa Barbara
     affiliation-url: https://es.ucsb.edu/
-date: 06-06-2025
+date: 2025-06-06
 categories: [R, Blog, Undergrad]
 image: media/ellisonhall.jpg
-draft: false
+code-fold: true
+freeze: true
 toc: true
 citation:
     url: https://ethan-mathews24.github.io/

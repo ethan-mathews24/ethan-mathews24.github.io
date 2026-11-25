@@ -6,10 +6,9 @@ author:
     url: https://ethan-mathews24.github.io/
     affiliation: Undergraduate @ The Univeristy of California, Santa Barbara
     affiliation-url: https://es.ucsb.edu/
-date: 03-14-2025
+date: 2025-03-14
 categories: [ArcGIS, SQL, Undergrad]
 image: media/campfire.jpg
-draft: false
 toc: true
 citation:
     url: https://ethan-mathews24.github.io/

@@ -51,6 +51,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-fea11cae19374b0abccf998f98d0a55c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark-5a76b97c7c7bbe650aef9cd525042c08.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="site_libs/bootstrap/bootstrap-fea11cae19374b0abccf998f98d0a55c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -340,18 +343,18 @@ ul.task-list li input[type="checkbox"] {
 <div class="lightbox quarto-layout-panel" data-layout="[[1, 1], [1, 1]]">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="media/lagoon.jpg" class="img-fluid" data-group="passion" data-description="UCSB Campus Lagoon"></p>
+<p><a href="media/lagoon.jpg" class="lightbox" data-glightbox="description: .lightbox-desc-1;" data-gallery="passion"><img src="media/lagoon.jpg" class="img-fluid"></a></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="media/tidalzone.jpg" class="img-fluid" data-group="passion" data-description="Coal Oil Point - Golden Hour"></p>
+<p><a href="media/tidalzone.jpg" class="lightbox" data-glightbox="description: .lightbox-desc-2;" data-gallery="passion"><img src="media/tidalzone.jpg" class="img-fluid"></a></p>
 </div>
 </div>
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="media/lizard.jpg" class="img-fluid" data-group="passion" data-description="Lizard's Mouth, SB"></p>
+<p><a href="media/lizard.jpg" class="lightbox" data-glightbox="description: .lightbox-desc-3;" data-gallery="passion"><img src="media/lizard.jpg" class="img-fluid"></a></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="media/rocks.jpg" class="img-fluid" data-group="passion" data-description="Sperling Preserve"></p>
+<p><a href="media/rocks.jpg" class="lightbox" data-glightbox="description: .lightbox-desc-4;" data-gallery="passion"><img src="media/rocks.jpg" class="img-fluid"></a></p>
 </div>
 </div>
 </div>
@@ -362,6 +365,20 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 
+<div class="hidden" aria-hidden="true">
+<div class="glightbox-desc lightbox-desc-1">
+<p>UCSB Campus Lagoon</p>
+</div>
+<div class="glightbox-desc lightbox-desc-2">
+<p>Coal Oil Point - Golden Hour</p>
+</div>
+<div class="glightbox-desc lightbox-desc-3">
+<p>Lizard’s Mouth, SB</p>
+</div>
+<div class="glightbox-desc lightbox-desc-4">
+<p>Sperling Preserve</p>
+</div>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -791,6 +808,38 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

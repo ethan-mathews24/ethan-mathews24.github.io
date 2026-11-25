@@ -6,10 +6,9 @@ author:
     url: https://ethan-mathews24.github.io/
     affiliation: Undergraduate @ The Univeristy of California, Santa Barbara
     affiliation-url: https://es.ucsb.edu/
-date: 03-06-2025
+date: 2025-03-06
 categories: [Op-Ed, Undergrad]
 image: media/agroecology.JPEG
-draft: false
 toc: true
 citation:
     url: https://ethan-mathews24.github.io/

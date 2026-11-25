@@ -3,8 +3,6 @@ title: "Lima -> Cusco"
 description: "An exhilarating adventure across Peru filled with action-packed days on minimal amounts of sleep. 06/01/2023 - 06/11/2023"
 image: media/machu.jpg
 toc: true
-filters:
-  - lightbox
 lightbox: auto
 ---
 

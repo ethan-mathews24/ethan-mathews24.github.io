@@ -9,11 +9,10 @@ author:
 date: 2026-12-02
 categories: [MEDS, R, Geospatial Analysis, Remote Sensing]
 image: media/texasfreeze.png
-draft: false
 code-fold: true
 toc: true
 citation:
-    url: https://ethan-mathews24.github.io/texas-storm-blackouts/
+    url: https://ethan-mathews24.github.io/projects/texas-storm-blackouts/
 execute:
   freeze: true
   eval: true
@@ -45,7 +44,7 @@ This analysis utilizes four datasets from three different sources:
 
 **OpenStreetMap Building Footprints** - OpenStreetMap (OSM) is a free, editable geographic database and world map built and maintained by a global community of volunteers. It contains various features, but for this analysis, building polygons in the Houston area were filtered using an SQL query to keep those classified as residential, apartments, house, static_caravan, or detached, as well as unclassified buildings with no type or name [@openstreetmap].
 
-**OpenStreetMap Road Networks** - As stated above, OSM contains various features across the globe. For this analysis, we were concerned with line features of the highway road network in the Houston area, which were filtered using an SQL query to `fclass='motorway'` [@openstreetmap].
+**OpenStreetMap Road Networks** - As stated above, OSM contains various features across the globe. For this analysis, we were concerned with line features of the highway road network in the Houston area, which were filtered using an SQL query to fclass='motorway' [@openstreetmap].
 
 **U.S. Census American Community Survey** - The U.S. Census Bureau provides five-year estimates at the census tract level, including median household income. This analysis uses the 2015-2019 estimates to examine how areas with different incomes were affected [@census].
 

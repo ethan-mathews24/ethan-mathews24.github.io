@@ -3,8 +3,6 @@ title: "Japan"
 description: "Ten days across Tokyo, Kyoto, and Osaka, chasing cherry blossoms, ramen, and everything in between. 03/25/26 - 04/06/26"
 image: media/japan.JPG
 toc: true
-filters:
-  - lightbox
 lightbox: auto
 ---
 
