@@ -1,8 +1,5 @@
 ---
 title: "the pups"
-filters:
-  - lightbox
-lightbox: auto
 freeze: auto
 format:
   html:

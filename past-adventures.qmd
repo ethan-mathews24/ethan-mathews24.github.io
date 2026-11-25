@@ -1,7 +1,4 @@
 ---
-filters:
-  - lightbox
-lightbox: auto
 freeze: auto
 listing: 
   contents: adventures

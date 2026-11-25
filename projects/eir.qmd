@@ -7,7 +7,7 @@ author:
     affiliation: Undergraduate @ The Univeristy of California, Santa Barbara
     affiliation-url: https://es.ucsb.edu/
 date: 03-19-2025
-categories: [Writing, ArcGIS, Undergrad, UCSB]
+categories: [Technical Writing, ArcGIS, Undergrad]
 image: media/ucsbcampus.jpg
 draft: false
 toc: true

@@ -1,0 +1,90 @@
+---
+title: "Texas Blackouts"
+description: "Analyzing the 2021 Pre- and Post- Winter Storm Light Intensity in Houston, Texas."
+author:
+  - name: Ethan Mathews
+    url: https://ethan-mathews24.github.io/
+    affiliation: MEDS @ The Bren School
+    affiliation-url: https://bren.ucsb.edu/masters-programs/master-environmental-data-science
+date: 2026-12-02
+categories: [MEDS, R, Geospatial Analysis, Remote Sensing]
+image: media/texasfreeze.png
+draft: false
+code-fold: true
+toc: true
+citation:
+    url: https://ethan-mathews24.github.io/texas-storm-blackouts/
+execute:
+  freeze: true
+  eval: true
+bibliography: references.bib
+---
+
+## Introduction 
+
+
+
+
+### Research Question 
+
+
+
+
+## Background 
+
+
+
+
+
+## Data and Methods 
+
+### Data Sources
+This analysis utilizes four datasets from three different sources: 
+
+**NASA VIIRS Night Lights** - NASA's Visible Infrared Imaging Radiometer Suite (VIIRS) is a satellite instrument that captures images of Earth day and night using 22 different channels of light. The analysis uses two dates of imagery: February 7, 2021, a clear night before the storms, and February 16, 2021, during the peak blackout period. The data is measured in nanowatts per square centimeter per steradian (nW cm⁻²sr⁻¹) [@nasa].
+
+**OpenStreetMap Building Footprints** - OpenStreetMap (OSM) is a free, editable geographic database and world map built and maintained by a global community of volunteers. It contains various features, but for this analysis, building polygons in the Houston area were filtered using an SQL query to keep those classified as residential, apartments, house, static_caravan, or detached, as well as unclassified buildings with no type or name [@openstreetmap].
+
+**OpenStreetMap Road Networks** - As stated above, OSM contains various features across the globe. For this analysis, we were concerned with line features of the highway road network in the Houston area, which were filtered using an SQL query to `fclass='motorway'` [@openstreetmap].
+
+**U.S. Census American Community Survey** - The U.S. Census Bureau provides five-year estimates at the census tract level, including median household income. This analysis uses the 2015-2019 estimates to examine how areas with different incomes were affected [@census].
+
+
+### How the Analysis was Approached
+
+
+
+
+### Loading and Preparing the Data
+
+
+
+## Results 
+
+
+
+## Discussion 
+
+
+
+
+
+## Conclusion 
+
+Comparing VIIRS night lights from February 7 and February 16, 2021 shows a widespread drop in light intensity across Houston after the winter storms. After identifying cells with a decrease greater than 200 nW cm⁻² sr⁻¹ and excluding areas within 200 m of highways, an estimated 157,408 homes lost power. This approach has several limitations. The 200 nW cm⁻² sr⁻¹ threshold is somewhat arbitrary, the comparison relies on only two cloud-free dates, and the coarse raster resolution means entire cells are labeled as blackouts. OpenStreetMap building data may also be incomplete and not have the correct building classification. Finally, even though this analysis examined whether impacts differed across socioeconomic groups, this data was not from the same year as when the images were taken. A two year difference may not seem insignificant, but for the analysis to be representative of the exact coniditions, all data would have been from the same years
+
+
+
+## Data Access 
+**NASA's VIIRS Lights Data (VNP46A1)** - NASA's Visible Infrared Imaging Radiometer Suite (VIIRS), housing the h08v05 and h08v06 tiles. Accessed via NASA Earthdata: <https://worldview.earthdata.nasa.gov/>
+
+**OpenStreetMap Roads and Houses Data** - Road network and building footprint data. Accessed via Geofabrik: <https://download.geofabrik.de/>
+
+**U.S. Census Bureau Data** - American Community Survey 5-Year Estimates (2015-2019), Texas census tracts. Accessed via: <https://www.census.gov/programs-surveys/acs>
+
+
+
+## References 
+
+::: {#refs}
+:::

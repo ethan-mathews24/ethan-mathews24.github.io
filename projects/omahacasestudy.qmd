@@ -7,7 +7,7 @@ author:
     affiliation: Undergraduate @ The Univeristy of California, Santa Barbara
     affiliation-url: https://es.ucsb.edu/
 date: 06-00-2025
-categories: [ArcGIS, Undergrad, UCSB]
+categories: [ArcGIS, Undergrad]
 image: media/omaha.jpg
 draft: false
 toc: true

@@ -6,13 +6,13 @@ author:
     url: https://ethan-mathews24.github.io/
     affiliation: MEDS @ The Bren School
     affiliation-url: https://bren.ucsb.edu/masters-programs/master-environmental-data-science
-date: 11-09-2026
-categories: [Blog, Data Bias, MEDS]
-image: media/nyaqi.png
+date: 2026-11-09
+categories: [MEDS, Environmental Justice, Blog, Data Bias]
+image: media/nycaqi.jpg
 draft: false
 toc: true
 citation:
-    url: https://ethan-mathews24.github.io/
+    url: https://ethan-mathews24.github.io/monitoring-deserts-blog/
 ---
 
 ::: {.callout-note}

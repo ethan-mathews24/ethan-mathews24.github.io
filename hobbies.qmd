@@ -1,8 +1,5 @@
 ---
 title: "hobbies"
-filters:
-  - lightbox
-lightbox: auto
 freeze: auto
 format:
   html:

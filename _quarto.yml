@@ -36,9 +36,6 @@ website:
     background: light # or `dark`
     left: Copyright 2026, Ethan Mathews
 
-filters:
-  - lightbox
-
 format:
   html:
     theme: 
