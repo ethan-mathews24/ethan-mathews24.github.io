@@ -29,6 +29,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -391,16 +426,33 @@ div.csl-indent {
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
   <ul class="collapse">
   <li><a href="#research-question" id="toc-research-question" class="nav-link" data-scroll-target="#research-question">Research Question</a></li>
+  <li><a href="#why-it-matters" id="toc-why-it-matters" class="nav-link" data-scroll-target="#why-it-matters">Why it Matters</a></li>
   </ul></li>
-  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a>
+  <ul class="collapse">
+  <li><a href="#the-crisis" id="toc-the-crisis" class="nav-link" data-scroll-target="#the-crisis">The Crisis</a></li>
+  <li><a href="#leveraging-data-science" id="toc-leveraging-data-science" class="nav-link" data-scroll-target="#leveraging-data-science">Leveraging Data Science</a></li>
+  </ul></li>
   <li><a href="#data-and-methods" id="toc-data-and-methods" class="nav-link" data-scroll-target="#data-and-methods">Data and Methods</a>
   <ul class="collapse">
   <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources">Data Sources</a></li>
   <li><a href="#how-the-analysis-was-approached" id="toc-how-the-analysis-was-approached" class="nav-link" data-scroll-target="#how-the-analysis-was-approached">How the Analysis was Approached</a></li>
   <li><a href="#loading-and-preparing-the-data" id="toc-loading-and-preparing-the-data" class="nav-link" data-scroll-target="#loading-and-preparing-the-data">Loading and Preparing the Data</a></li>
   </ul></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
+  <ul class="collapse">
+  <li><a href="#visualizing-the-comparison-of-night-light-intensities" id="toc-visualizing-the-comparison-of-night-light-intensities" class="nav-link" data-scroll-target="#visualizing-the-comparison-of-night-light-intensities">Visualizing the Comparison of Night Light Intensities</a></li>
+  <li><a href="#finding-blackout-areas" id="toc-finding-blackout-areas" class="nav-link" data-scroll-target="#finding-blackout-areas">Finding Blackout Areas</a></li>
+  <li><a href="#excluding-highways-from-analysis" id="toc-excluding-highways-from-analysis" class="nav-link" data-scroll-target="#excluding-highways-from-analysis">Excluding Highways from Analysis</a></li>
+  <li><a href="#number-of-homes-affected" id="toc-number-of-homes-affected" class="nav-link" data-scroll-target="#number-of-homes-affected">Number of Homes Affected</a></li>
+  <li><a href="#socioeconomic-analysis" id="toc-socioeconomic-analysis" class="nav-link" data-scroll-target="#socioeconomic-analysis">Socioeconomic Analysis</a></li>
+  </ul></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a>
+  <ul class="collapse">
+  <li><a href="#main-takeaways" id="toc-main-takeaways" class="nav-link" data-scroll-target="#main-takeaways">Main Takeaways</a></li>
+  <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations">Limitations</a></li>
+  <li><a href="#future-directions" id="toc-future-directions" class="nav-link" data-scroll-target="#future-directions">Future Directions</a></li>
+  </ul></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   <li><a href="#data-access" id="toc-data-access" class="nav-link" data-scroll-target="#data-access">Data Access</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
@@ -417,12 +469,33 @@ div.csl-indent {
 
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Extreme weather events are becoming more frequent and intense, with devastating impacts on communities and infrastructure. In February 2021, Winter Storm Uri swept across Texas, causing an estimated $130 billion in economic losses. At its peak, more than 4.5 million customers (over 10 million people) lost electricity, some for several days <span class="citation" data-cites="ERS">(<a href="#ref-ERS" role="doc-biblioref">Busby et al. 2021</a>)</span>. The crisis was worsened by a cascade of failures across the power system. Freezing temperatures caused multiple generation sources to fail, most notably natural gas, and as demand reached record highs, the state grid approached a dangerous drop in frequency. To prevent a total system collapse, grid operators cut power to millions of customers, leading to widespread blackouts across the state, including the Houston metropolitan area <span class="citation" data-cites="IEEE">(<a href="#ref-IEEE" role="doc-biblioref">Soham Ghosh and Dutta 2021</a>)</span>.</p>
 <section id="research-question" class="level3">
 <h3 class="anchored" data-anchor-id="research-question">Research Question</h3>
+<p>This project aims to answer the question:</p>
+<p><strong>How did night light intensity in the Houston metropolitan area change after the February 2021 winter storms, and how were blackout impacts distributed across communities of different income levels?</strong></p>
+</section>
+<section id="why-it-matters" class="level3">
+<h3 class="anchored" data-anchor-id="why-it-matters">Why it Matters</h3>
+<p>Understanding where outages occurred and which homes were affected can help utilities and grid operators prioritize infrastructure upgrades before future events. Examining how impacts varied across income levels can also reveal whether certain communities were disproportionately affected. Identifying these vulnerable communities can help decision-makers direct resources where they are needed most during future extreme weather events.</p>
 </section>
 </section>
 <section id="background" class="level2">
 <h2 class="anchored" data-anchor-id="background">Background</h2>
+<section id="the-crisis" class="level3">
+<h3 class="anchored" data-anchor-id="the-crisis">The Crisis</h3>
+<p>Winter Storm Uri was not the first time Texas faced a winter energy crisis. After a 2011 cold snap caused widespread outages, the state did not adequately winterize its electricity and natural gas infrastructure. In 2021, the consequences of that inaction became clear. The two systems depend on each other: as freezing temperatures disrupted gas production, which fell by nearly half at its lowest point, pipeline pressure dropped and gas-fired power plants struggled to run <span class="citation" data-cites="ERS">(<a href="#ref-ERS" role="doc-biblioref">Busby et al. 2021</a>)</span>. At the same time, losing those plants reduced the electricity available to keep gas facilities operating, creating a feedback loop. Nuclear, coal, and wind generation also experienced disruptions, though on a smaller scale. In total, about 30 GW of generation went offline while demand climbed to record levels. Facing a potential collapse of the entire grid, the Electric Reliability Council of Texas (ERCOT), the nonprofit that manages most of the state’s power grid, ordered utilities to cut power to millions of customers <span class="citation" data-cites="ERS">(<a href="#ref-ERS" role="doc-biblioref">Busby et al. 2021</a>)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="media/txweather.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Forecast map of Winter Storm Uri, February 2021. Source: <a href="https://weather.com/safety/winter/news/2021-02-14-winter-storm-uri-south-midwest-northeast-snow-ice">The Weather Channel</a></figcaption>
+</figure>
+</div>
+</section>
+<section id="leveraging-data-science" class="level3">
+<h3 class="anchored" data-anchor-id="leveraging-data-science">Leveraging Data Science</h3>
+<p>The storm affected millions of people across Texas, but its impacts were not evenly distributed. Statewide maps and outage totals tell part of the story, but they can make it seem as though every community was affected equally. Geospatial analysis allows us to look more closely. Satellite-based night lights data can reveal where outages occurred across an entire metropolitan area, even where detailed utility records are unavailable. Combining this with building footprints and census data makes it possible to estimate how many homes lost power and examine whether certain communities, such as lower-income neighborhoods, were disproportionately affected.</p>
+</section>
 </section>
 <section id="data-and-methods" class="level2">
 <h2 class="anchored" data-anchor-id="data-and-methods">Data and Methods</h2>
@@ -431,25 +504,338 @@ div.csl-indent {
 <p>This analysis utilizes four datasets from three different sources:</p>
 <p><strong>NASA VIIRS Night Lights</strong> - NASA’s Visible Infrared Imaging Radiometer Suite (VIIRS) is a satellite instrument that captures images of Earth day and night using 22 different channels of light. The analysis uses two dates of imagery: February 7, 2021, a clear night before the storms, and February 16, 2021, during the peak blackout period. The data is measured in nanowatts per square centimeter per steradian (nW cm⁻²sr⁻¹) <span class="citation" data-cites="nasa">(<a href="#ref-nasa" role="doc-biblioref">NASA LAADS DAAC 2021</a>)</span>.</p>
 <p><strong>OpenStreetMap Building Footprints</strong> - OpenStreetMap (OSM) is a free, editable geographic database and world map built and maintained by a global community of volunteers. It contains various features, but for this analysis, building polygons in the Houston area were filtered using an SQL query to keep those classified as residential, apartments, house, static_caravan, or detached, as well as unclassified buildings with no type or name <span class="citation" data-cites="openstreetmap">(<a href="#ref-openstreetmap" role="doc-biblioref">OpenStreetMap Contributors 2021</a>)</span>.</p>
-<p><strong>OpenStreetMap Road Networks</strong> - As stated above, OSM contains various features across the globe. For this analysis, we were concerned with line features of the highway road network in the Houston area, which were filtered using an SQL query to <code>fclass='motorway'</code> <span class="citation" data-cites="openstreetmap">(<a href="#ref-openstreetmap" role="doc-biblioref">OpenStreetMap Contributors 2021</a>)</span>.</p>
+<p><strong>OpenStreetMap Road Networks</strong> - OSM also contains road network data. For this analysis, I used line features of the highway network in the Houston area, filtered using an SQL query to <code>fclass='motorway'</code> <span class="citation" data-cites="openstreetmap">(<a href="#ref-openstreetmap" role="doc-biblioref">OpenStreetMap Contributors 2021</a>)</span>.</p>
 <p><strong>U.S. Census American Community Survey</strong> - The U.S. Census Bureau provides five-year estimates at the census tract level, including median household income. This analysis uses the 2015-2019 estimates to examine how areas with different incomes were affected <span class="citation" data-cites="census">(<a href="#ref-census" role="doc-biblioref">United States Census Bureau 2019</a>)</span>.</p>
 </section>
 <section id="how-the-analysis-was-approached" class="level3">
 <h3 class="anchored" data-anchor-id="how-the-analysis-was-approached">How the Analysis was Approached</h3>
+<p>The analysis was conducted in these steps:</p>
+<ol type="1">
+<li><strong>Load Packages and Data</strong> - Load the required packages along with the VIIRS tiles, OSM building footprints, OSM motorway network, and U.S. Census data.</li>
+<li><strong>Prepare Spatial Data</strong> - Reproject datasets to the same coordinate reference system so they align properly.</li>
+<li><strong>Join Datasets</strong> - Join socio-economic data to geometries and then merge the VIIRS tiles for each date.</li>
+<li><strong>Calculate Light Intensity Changes</strong> - Compare the pre- and post-storm imagery to calculate the change in light intensity.</li>
+<li><strong>Define Blackout Threshold</strong> - Classify areas that experienced a light intensity drop greater than 200 nW cm⁻²sr⁻¹ as experiencing a blackout.</li>
+<li><strong>Exclude Highways</strong> - Remove areas within 200 m of major highways, since reduced traffic during the storm could cause drops in light unrelated to power loss.</li>
+<li><strong>Identify Impacted Homes</strong> - Find residential buildings that fall within blackout areas.</li>
+<li><strong>Compare Socioeconomic Effects</strong> - Compare median household income between census tracts that did and did not experience blackouts.</li>
+</ol>
 </section>
 <section id="loading-and-preparing-the-data" class="level3">
 <h3 class="anchored" data-anchor-id="loading-and-preparing-the-data">Loading and Preparing the Data</h3>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load in required packages</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)        <span class="co"># Data manipulation and visualization</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)             <span class="co"># File path management</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(terra)            <span class="co"># Raster data processing</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stars)            <span class="co"># Spatiotemporal arrays</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)               <span class="co"># Spatial data handling</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tmap)             <span class="co"># Thematic mapping</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">tmap_options</span>(<span class="at">show.messages =</span> <span class="cn">FALSE</span>, <span class="at">show.warnings =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define data folder once to shorten file paths</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>data_dir <span class="ot">&lt;-</span> <span class="fu">here</span>(<span class="st">"projects"</span>, <span class="st">"texas-storm-blackouts"</span>, <span class="st">"data"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Load in Night Lights data (two tiles per date)</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>light_feb_07_h5 <span class="ot">&lt;-</span> <span class="fu">read_stars</span>(<span class="fu">file.path</span>(data_dir, <span class="st">"VNP46A1"</span>, <span class="st">"VNP46A1.A2021038.h08v05.001.2021039064328.tif"</span>))</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>light_feb_07_h6 <span class="ot">&lt;-</span> <span class="fu">read_stars</span>(<span class="fu">file.path</span>(data_dir, <span class="st">"VNP46A1"</span>, <span class="st">"VNP46A1.A2021038.h08v06.001.2021039064329.tif"</span>))</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>light_feb_16_h5 <span class="ot">&lt;-</span> <span class="fu">read_stars</span>(<span class="fu">file.path</span>(data_dir, <span class="st">"VNP46A1"</span>, <span class="st">"VNP46A1.A2021047.h08v05.001.2021048091106.tif"</span>))</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>light_feb_16_h6 <span class="ot">&lt;-</span> <span class="fu">read_stars</span>(<span class="fu">file.path</span>(data_dir, <span class="st">"VNP46A1"</span>, <span class="st">"VNP46A1.A2021047.h08v06.001.2021048091105.tif"</span>))</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Load in OpenStreetMap highway data (motorways only)</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>roads_query <span class="ot">&lt;-</span> <span class="st">"SELECT * FROM gis_osm_roads_free_1 WHERE fclass='motorway'"</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>highway <span class="ot">&lt;-</span> <span class="fu">st_read</span>(</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">file.path</span>(data_dir, <span class="st">"gis_osm_roads_free_1.gpkg"</span>),</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">query =</span> roads_query,</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">quiet =</span> <span class="cn">TRUE</span> <span class="co"># suppress read messages</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Load in OpenStreetMap building data (residential only)</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>houses_query <span class="ot">&lt;-</span> <span class="st">"SELECT *</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="st">                 FROM gis_osm_buildings_a_free_1</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="st">                 WHERE (type IS NULL AND name IS NULL)</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="st">                 OR type IN ('residential', 'apartments', 'house', 'static_caravan', 'detached')"</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>houses <span class="ot">&lt;-</span> <span class="fu">st_read</span>(</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">file.path</span>(data_dir, <span class="st">"gis_osm_buildings_a_free_1.gpkg"</span>),</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  <span class="at">query =</span> houses_query,</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>  <span class="at">quiet =</span> <span class="cn">TRUE</span> <span class="co"># suppress read messages</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Load in U.S. Census tract geometries and income data</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>census_gdb <span class="ot">&lt;-</span> <span class="fu">file.path</span>(data_dir, <span class="st">"ACS_2019_5YR_TRACT_48_TEXAS.gdb"</span>)</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>census_tracts <span class="ot">&lt;-</span> <span class="fu">st_read</span>(census_gdb, <span class="at">layer =</span> <span class="st">"ACS_2019_5YR_TRACT_48_TEXAS"</span>, <span class="at">quiet =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>census_income <span class="ot">&lt;-</span> <span class="fu">st_read</span>(census_gdb, <span class="at">layer =</span> <span class="st">"X19_INCOME"</span>, <span class="at">quiet =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<p>These datasets were not originally in the same coordinate reference system (CRS). Different CRSs describe locations using different coordinate systems and units, so the same place can have different coordinates in each one. Datasets that are analyzed or mapped together must share a CRS, or they will not align correctly. I standardized all datasets to EPSG:3083 (NAD83 / Texas Centric Albers Equal Area), which preserves area and uses meters, making it well suited for distance-based steps like the 200 m highway buffer. To verify the reprojection worked, I added checks that return a warning if the CRSs do not match.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Transform CRSs</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>highway <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(highway, <span class="at">crs =</span> <span class="dv">3083</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>houses <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(houses, <span class="at">crs =</span> <span class="dv">3083</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Warn if the transformation did not produce matching CRSs</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">st_crs</span>(highway) <span class="sc">!=</span> <span class="fu">st_crs</span>(houses)) {</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">warning</span>(<span class="st">"Highways and houses have different CRSs"</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify CRSs match</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="fu">st_crs</span>(highway) <span class="sc">==</span> <span class="fu">st_crs</span>(houses) <span class="co"># Output is TRUE</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<p>Once these datasets were reprojected to having the same CRS, a left join was used on the socio-economic dataset that is used later in the analysis</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Change column name to make them match</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>census_income <span class="ot">&lt;-</span> census_income <span class="sc">|&gt;</span> </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="st">"GEOID_Data"</span> <span class="ot">=</span> <span class="st">"GEOID"</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Left join income data to geometries</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>socio_economic <span class="ot">&lt;-</span> census_tracts <span class="sc">|&gt;</span> </span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(census_income, <span class="at">by =</span> <span class="st">"GEOID_Data"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_transform</span>(<span class="fu">st_crs</span>(houses)) <span class="co"># reproject to match building data</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify the join worked </span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">is.na</span>(socio_economic<span class="sc">$</span>GEOID_Data)) <span class="co"># = 0 </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
 </section>
 </section>
 <section id="results" class="level2">
 <h2 class="anchored" data-anchor-id="results">Results</h2>
+<section id="visualizing-the-comparison-of-night-light-intensities" class="level3">
+<h3 class="anchored" data-anchor-id="visualizing-the-comparison-of-night-light-intensities">Visualizing the Comparison of Night Light Intensities</h3>
+<p>The analysis began by comparing night light intensity from VIIRS imagery on February 7, 2021 (pre-storm) and February 16, 2021 (post-storm). For visualization, values were limited to 0–1,000 nW cm⁻² sr⁻¹ so that a small number of very bright pixels would not dominate the color scale; the blackout analysis itself uses the full, unmasked data.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine the two tiles for each date</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>pre_storm <span class="ot">&lt;-</span> <span class="fu">st_mosaic</span>(light_feb_07_h5, light_feb_07_h6) <span class="co"># pre storm</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>post_storm <span class="ot">&lt;-</span> <span class="fu">st_mosaic</span>(light_feb_16_h5, light_feb_16_h6) <span class="co"># during blackout</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the bbox extent of Houston</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>houston_bbox <span class="ot">&lt;-</span> <span class="fu">st_bbox</span>(</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="at">xmin =</span> <span class="sc">-</span><span class="fl">96.5</span>, <span class="at">ymin =</span> <span class="dv">29</span>, <span class="at">xmax =</span> <span class="sc">-</span><span class="fl">94.5</span>, <span class="at">ymax =</span> <span class="fl">30.5</span>),</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">crs =</span> <span class="fu">st_crs</span>(pre_storm)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Clip extent of the raster layers</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>pre_storm_houston <span class="ot">&lt;-</span> <span class="fu">st_crop</span>(pre_storm, houston_bbox)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>post_storm_houston <span class="ot">&lt;-</span> <span class="fu">st_crop</span>(post_storm, houston_bbox)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Mask unrealistic values (&gt;1000 or &lt;= 0)</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>masked_pre_storm <span class="ot">&lt;-</span> pre_storm_houston</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>masked_pre_storm[(masked_pre_storm <span class="sc">&gt;</span> <span class="dv">1000</span>) <span class="sc">|</span> (masked_pre_storm <span class="sc">&lt;=</span> <span class="dv">0</span>)] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>masked_post_storm <span class="ot">&lt;-</span> post_storm_houston</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>masked_post_storm[(masked_post_storm <span class="sc">&gt;</span> <span class="dv">1000</span>) <span class="sc">|</span> (masked_post_storm <span class="sc">&lt;=</span> <span class="dv">0</span>)] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine layers for mapping</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>combined_storm <span class="ot">&lt;-</span> <span class="fu">c</span>(masked_pre_storm, masked_post_storm)</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Change names for better map visualizations</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(combined_storm) <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>  <span class="st">"February 7, 2021 (Pre-Storm)"</span>,</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>  <span class="st">"February 16, 2021 (Post-Storm)"</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="864"></p>
+<figcaption>Night light intensity in the Houston area before (left) and after (right) the February 2021 winter storms</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The comparison shows a clear decline in night light intensity across Houston after the storms. Many areas that were brightly lit on February 7 appear noticeably darker on February 16, particularly across residential areas surrounding the city center. While night lights are an indirect measure of electricity use, this widespread drop strongly suggests large-scale power loss across the metropolitan area.</p>
+</section>
+<section id="finding-blackout-areas" class="level3">
+<h3 class="anchored" data-anchor-id="finding-blackout-areas">Finding Blackout Areas</h3>
+<p>In order to identify the blackout areas, I calculated the light intensity differennce between the two tiles and classified areas with a difference greater than 200 nW cm⁻²sr⁻¹ as areas that experienced blackouts.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate difference (change) in night light intensity</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>light_diff <span class="ot">&lt;-</span> <span class="fu">rast</span>(pre_storm) <span class="sc">-</span> <span class="fu">rast</span>(post_storm)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Reclassify the cells and drop any less than 200 nW cm⁻²sr⁻¹</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>rcl <span class="ot">&lt;-</span> <span class="fu">matrix</span>(</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="sc">-</span><span class="cn">Inf</span>,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="dv">200</span>,</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="cn">NA</span>,</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="dv">200</span>,</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="cn">Inf</span>,</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="dv">1</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">ncol =</span> <span class="dv">3</span>,</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">byrow =</span> <span class="cn">TRUE</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Reclassify</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>blackout_mask <span class="ot">&lt;-</span> <span class="fu">classify</span>(light_diff, <span class="at">rcl =</span> rcl)</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Vectorize the raster into polygons</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>blackout_vector <span class="ot">&lt;-</span> <span class="fu">st_as_stars</span>(blackout_mask) <span class="sc">|&gt;</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_sf</span>(<span class="at">merge =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_make_valid</span>()</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Crop the polygon to Houston extent</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>houston_blackout <span class="ot">&lt;-</span> <span class="fu">st_crop</span>(blackout_vector, houston_bbox) <span class="sc">|&gt;</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_transform</span>(<span class="at">crs =</span> <span class="st">"EPSG:3083"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="864"></p>
+<figcaption>Areas (red) are the regions in Houston where night light intensity dropped by more than 200 nW cm⁻² sr⁻¹ between February 7 and 16, 2021</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="excluding-highways-from-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="excluding-highways-from-analysis">Excluding Highways from Analysis</h3>
+<p>Highways are a major source of night light, largely from vehicle traffic. During the storm, reduced traffic on highways could cause drops in light that have nothing to do with power outages. To avoid falsely classifying these areas as blackouts, I created a 200 meter buffer around all motorways and removed those areas from the blackout data.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a 200m buffer around highways</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>highway_buffer <span class="ot">&lt;-</span> highway <span class="sc">|&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_union</span>() <span class="sc">|&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_buffer</span>(<span class="at">dist =</span> <span class="dv">200</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove highway buffers from blackout areas</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>blackout_no_highways <span class="ot">&lt;-</span> <span class="fu">st_difference</span>(houston_blackout, highway_buffer)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="864"></p>
+<figcaption>Blackout areas after excluding locations within 200 meters of motorways (yellow lines).</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Removing areas near motorways eliminates a noticeable portion of the original blackout area, particularly along the major highways radiating out from downtown Houston. The remaining blackout areas are more likely to reflect actual power outages in residential neighborhoods rather than changes in traffic.</p>
+</section>
+<section id="number-of-homes-affected" class="level3">
+<h3 class="anchored" data-anchor-id="number-of-homes-affected">Number of Homes Affected</h3>
+<p>To estimate the number of homes that lost power, I selected all residential buildings from OpenStreetMap that fall within the blackout areas remaining after the motorway exclusion.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter the houses that relate to blackout area</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>houses_blackout <span class="ot">&lt;-</span> houses <span class="sc">|&gt;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_filter</span>(blackout_no_highways)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Count the number of affected homes</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>n_houses <span class="ot">&lt;-</span> <span class="fu">nrow</span>(houses_blackout)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<p>Approximately 157,408 homes in the Houston area were located in blackout areas during the February 2021 storms. However, this count is based on building footprints, so it can underestimates the number of households affected, since a single apartment building can contain many units.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tell sf that building attributes apply to the whole footprint (avoids centroid warnings)</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">st_agr</span>(houses) <span class="ot">&lt;-</span> <span class="st">"constant"</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">st_agr</span>(houses_blackout) <span class="ot">&lt;-</span> <span class="st">"constant"</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert buildings to points for mapping</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>all_homes <span class="ot">&lt;-</span> <span class="fu">st_centroid</span>(houses)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>impacted_homes <span class="ot">&lt;-</span> <span class="fu">st_centroid</span>(houses_blackout)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Homes outside blackout areas</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>not_impacted_homes <span class="ot">&lt;-</span> all_homes[<span class="sc">!</span>all_homes<span class="sc">$</span>osm_id <span class="sc">%in%</span> houses_blackout<span class="sc">$</span>osm_id, ]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="864"></p>
+<figcaption>Residential buildings in the Houston area that lost power (red) and maintained power (green) during the February 2021 winter storms, with major highways shown in yellow.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Homes that lost power are concentrated in the dense residential areas west and north of downtown Houston, while many homes on the outskirts of the metro area appear to have maintained power. This uneven pattern suggests that outage impacts varied considerably across neighborhoods, which raises the question of whether certain communities were more affected than others.</p>
+</section>
+<section id="socioeconomic-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="socioeconomic-analysis">Socioeconomic Analysis</h3>
+<p>To examine whether the impacts of the blackout were evenly distributed, I combined the blackout results with median household income from the 2015-2019 American Community Survey. Comparing where homes lost power with the income levels of the surrounding census tracts can help reveal whether certain communities were disproportionately affected.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert Houston bbox to a polygon</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>houston_area <span class="ot">&lt;-</span> <span class="fu">st_as_sfc</span>(houston_bbox) <span class="sc">|&gt;</span> </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_transform</span>(<span class="fu">st_crs</span>(houston_blackout))</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Crop census tracts to Houston and rename income column</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>socio_houston <span class="ot">&lt;-</span> socio_economic <span class="sc">|&gt;</span> </span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_crop</span>(houston_area) <span class="sc">|&gt;</span> </span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">median_income =</span> B19013e1)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="864"></p>
+<figcaption>Residential buildings that lost power (red) overlaid on the median household income in Houston, Texas.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Overlaying homes that lost power on median household income shows that outages occurred across a wide range of income levels. Darker colors indicate lower-income tracts, while brighter colors indicate higher-income tracts. While the map alone cannot confirm whether lower-income areas were disproportionately affected, it highlights where outages overlapped with lower-income communities.</p>
+</section>
 </section>
 <section id="discussion" class="level2">
 <h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
+<section id="main-takeaways" class="level3">
+<h3 class="anchored" data-anchor-id="main-takeaways">Main Takeaways</h3>
+<p>The February 2021 blackouts exposed serious vulnerabilities in Texas’s energy infrastructure, leaving millions of people without power during freezing temperatures. This analysis shows how satellite night lights data, combined with building footprints and census data, can be used to estimate where outages occurred and which homes were affected, even without detailed utility records. In Houston, approximately 30% homes were located in blackout areas, and outages occurred across a wide range of income levels. However, similar exposure does not necessarily mean equal impact. Lower-income households may have had fewer resources to cope with extended outages, such as the ability to relocate or purchase backup heating. Understanding both where outages occurred and who was most vulnerable is essential for planning more resilient and equitable infrastructure.</p>
+</section>
+<section id="limitations" class="level3">
+<h3 class="anchored" data-anchor-id="limitations">Limitations</h3>
+<p>While this analysis provides a useful estimate of the storm’s impacts, several limitations should be considered.</p>
+<ol type="1">
+<li><p><strong>Blackout and buffer thresholds</strong> - The 200 nW cm⁻² sr⁻¹ blackout threshold and the 200 m motorway buffer were chosen as reasonable assumptions rather than values derived from supporting evidence. Different thresholds would change the estimated number of affected homes.</p></li>
+<li><p><strong>Limited imagery</strong> - Cloud cover during the storm limited the analysis to two clear nights. Outages that began after February 7 but were restored before February 16 are not captured.</p></li>
+<li><p><strong>Spatial resolution</strong> - VIIRS pixels are roughly 500 m across, so an entire cell is classified as a blackout even if only part of it lost power.</p></li>
+<li><p><strong>Building data</strong> - OpenStreetMap is built by volunteers, so building footprints may be incomplete or misclassified. Each building is also counted once, so apartment buildings with many units lead to an undercount of affected households.</p></li>
+<li><p><strong>Census timing</strong> - The income data comes from the 2015-2019 American Community Survey, which may not reflect conditions in 2021.</p></li>
+</ol>
+<p>Disclosing these limitations makes the analysis more transparent and provides a framework for anyone looking to reproduce or improve it.</p>
+</section>
+<section id="future-directions" class="level3">
+<h3 class="anchored" data-anchor-id="future-directions">Future Directions</h3>
+<p>This analysis could be extended in several ways. Incorporating additional nights of imagery throughout the storm would make it possible to track how quickly outages spread and how long it took for power to return to normal levels. Validating the results against utility outage reports would help assess the accuracy of the night lights approach and refine the blackout threshold.</p>
+<p>The socioeconomic analysis could also be expanded beyond income to include other indicators of vulnerability, such as age, race, or housing type, and could use statistical tests to determine whether differences between groups are significant.</p>
+</section>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>Comparing VIIRS night lights from February 7 and February 16, 2021 shows a widespread drop in light intensity across Houston after the winter storms. After identifying cells with a decrease greater than 200 nW cm⁻² sr⁻¹ and excluding areas within 200 m of highways, an estimated 157,408 homes lost power. This approach has several limitations. The 200 nW cm⁻² sr⁻¹ threshold is somewhat arbitrary, the comparison relies on only two cloud-free dates, and the coarse raster resolution means entire cells are labeled as blackouts. OpenStreetMap building data may also be incomplete and not have the correct building classification. Finally, even though this analysis examined whether impacts differed across socioeconomic groups, this data was not from the same year as when the images were taken. A two year difference may not seem insignificant, but for the analysis to be representative of the exact coniditions, all data would have been from the same years</p>
+<p>Winter Storm Uri showed how quickly failures in interconnected energy systems can cascade into a public crisis. This analysis used satellite night lights, building footprints, and census data to estimate that approximately 157,408 homes in the Houston area lost power. While the approach has limitations, it offers a scalable way to assess outage impacts when detailed utility data is unavailable. As Texas and other regions work to strengthen their grids, tools like these can help ensure that resilience planning considers not just where outages occur, but who is most vulnerable to them.</p>
 </section>
 <section id="data-access" class="level2">
 <h2 class="anchored" data-anchor-id="data-access">Data Access</h2>
@@ -460,11 +846,17 @@ div.csl-indent {
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-ERS" class="csl-entry" role="listitem">
+Busby, Joshua W., Kyri Baker, Morgan D. Bazilian, et al. 2021. <span>“Cascading Risks: Understanding the 2021 Winter Blackout in Texas.”</span> <em>Energy Research &amp; Social Science</em> 77: 102106. <a href="https://doi.org/10.1016/j.erss.2021.102106">https://doi.org/10.1016/j.erss.2021.102106</a>.
+</div>
 <div id="ref-nasa" class="csl-entry" role="listitem">
 NASA LAADS DAAC. 2021. <span>“VIIRS/NPP Daily Gridded Day Night Band 15 Arc-Second Linear Lat Lon Grid Night.”</span> NASAs Level-1; Atmospheric Archive &amp; Distribution System Distributed Active Archive Center. <a href="https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/products/VNP46A1/">https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/products/VNP46A1/</a>.
 </div>
 <div id="ref-openstreetmap" class="csl-entry" role="listitem">
 OpenStreetMap Contributors. 2021. <span>“OpenStreetMap Data Extracts).”</span> Geofabrik GmbH. <a href="https://download.geofabrik.de/">https://download.geofabrik.de/</a>.
+</div>
+<div id="ref-IEEE" class="csl-entry" role="listitem">
+Soham Ghosh, Arpit Bohra, and Sreejata Dutta. 2021. <span>“The Texas Freeze of February 2021: Event and Winterization Analysis Using Cost and Pricing Data.”</span> <em>2021 IEEE Electrical Power and Energy Conference (EPEC)</em>, 7–13. <a href="https://doi.org/10.1109/EPEC52095.2021.9621500">https://doi.org/10.1109/EPEC52095.2021.9621500</a>.
 </div>
 <div id="ref-census" class="csl-entry" role="listitem">
 United States Census Bureau. 2019. <span>“2015-2019 American Community Survey 5-Year Estimates.”</span> United States Census Bureau. <a href="https://www.census.gov/programs-surveys/acs/technical-documentation/table-and-geography-changes/2019/5-year.html">https://www.census.gov/programs-surveys/acs/technical-documentation/table-and-geography-changes/2019/5-year.html</a>.
@@ -478,11 +870,11 @@ United States Census Bureau. 2019. <span>“2015-2019 American Community Survey 
   author = {Mathews, Ethan},
   title = {Texas {Blackouts}},
   date = {2026-12-02},
-  url = {https://ethan-mathews24.github.io/texas-storm-blackouts/},
+  url = {https://ethan-mathews24.github.io/projects/texas-storm-blackouts/},
   langid = {en}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-mathews2026" class="csl-entry quarto-appendix-citeas" role="listitem">
-Mathews, Ethan. 2026. <span>“Texas Blackouts.”</span> December 2. <a href="https://ethan-mathews24.github.io/texas-storm-blackouts/">https://ethan-mathews24.github.io/texas-storm-blackouts/</a>.
+Mathews, Ethan. 2026. <span>“Texas Blackouts.”</span> December 2. <a href="https://ethan-mathews24.github.io/projects/texas-storm-blackouts/">https://ethan-mathews24.github.io/projects/texas-storm-blackouts/</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
